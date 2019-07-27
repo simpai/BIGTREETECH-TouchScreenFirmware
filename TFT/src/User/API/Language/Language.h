@@ -8,10 +8,11 @@
 enum
 {
   ENGLISH = 0,
-  CHINESE,
+  KOREAN,
+//  CHINESE,
 //  RUSSIAN,
-  JAPANESE,
-  GERMAN,
+//  JAPANESE,
+//  GERMAN,
 //  ARMENIAN,
   
   LANGUAGE_NUM,

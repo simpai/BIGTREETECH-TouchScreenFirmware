@@ -25,9 +25,9 @@
 #define EXTRUDE_FAST_SPEED      1200 //
 
 //size of machine
-#define X_MAX_POS 300
-#define Y_MAX_POS 300
-#define Z_MAX_POS 400
+#define X_MAX_POS 150
+#define Y_MAX_POS 150
+#define Z_MAX_POS 144
 
 
 #define SUPPOR_PWC 

@@ -1,11 +1,12 @@
 #include "language.h"
 #include "includes.h"
 #include "language_en.h"
-#include "language_cn.h"
-#include "language_ru.h"
-#include "language_jp.h"
-#include "language_de.h"
-#include "language_am.h"
+#include "language_kr.h"
+// #include "language_cn.h"
+// #include "language_ru.h"
+// #include "language_jp.h"
+// #include "language_de.h"
+// #include "language_am.h"
 
 
 const char *const en_pack[LABEL_NUM]={
@@ -93,6 +94,93 @@ const char *const en_pack[LABEL_NUM]={
   EN_U_DISK_REMOVED,
   EN_ONBOARDSD,
   EN_READ_ONBOARDSD_ERROR
+};
+
+const char *const kr_pack[LABEL_NUM]={
+  KR_LANGUAGE,
+  KR_HEAT,
+  KR_MOVE,
+  KR_HOME,
+  KR_PRINT,
+  KR_EXTRUDE,
+  KR_FAN,
+  KR_SETTINGS,
+  KR_LEVELING,
+  KR_INC,
+  KR_DEC,
+  KR_NOZZLE,
+  KR_BED,
+  KR_STOP,
+  KR_BACK,
+  KR_PAGE_UP,
+  KR_PAGE_DOWN,
+  KR_PAUSE,
+  KR_RESUME,
+  KR_LOAD,
+  KR_UNLOAD,
+  KR_SLOW_SPEED,
+  KR_NORMAL_SPEED,
+  KR_FAST_SPEED,
+  KR_FAN_FULL_SPEED,
+  KR_FAN_HALF_SPEED,
+  KR_POWER_OFF,
+  KR_TOUCHSCREEN_ADJUST,
+  KR_SCREEN_INFO,
+  KR_DISCONNECT,
+  KR_BAUDRATE_115200,
+  KR_BAUDRATE_250000,
+  KR_PERCENTAGE,
+  KR_BABYSTEP,
+  KR_PERCENTAGE_SPEED,
+  KR_PERCENTAGE_FLOW,
+  KR_VALUE_ZERO,
+  KR_1_DEGREE,
+  KR_5_DEGREE,
+  KR_10_DEGREE,
+  KR_X_INC,
+  KR_Y_INC,
+  KR_Z_INC,
+  KR_X_DEC,
+  KR_Y_DEC,
+  KR_Z_DEC,
+  KR_X_HOME,
+  KR_Y_HOME,
+  KR_Z_HOME,
+  KR_001_MM,
+  KR_01_MM,
+  KR_1_MM,
+  KR_5_MM,
+  KR_10_MM,
+  KR_1_PERCENT,
+  KR_5_PERCENT,
+  KR_10_PERCENT,
+
+  KR_READY,
+  KR_PRINTING,
+  KR_BUSY,
+  KR_UNCONNECTED,
+  KR_DISCONNECT_INFO,
+  KR_LOADING,
+  KR_POWER_FAILED,
+  KR_CONTINUE,
+  KR_CANNEL,
+  KR_ADJUST_TITLE,
+  KR_ADJUST_INFO,
+  KR_ADJUST_OK,
+  KR_ADJUST_FAILED,
+  KR_WARNING,
+  KR_STOP_PRINT,
+  KR_CONFIRM,
+  KR_TFTSD,
+  KR_READ_TFTSD_ERROR,
+  KR_TFTSD_INSERTED,
+  KR_TFTSD_REMOVED,
+  KR_U_DISK,
+  KR_READ_U_DISK_ERROR,
+  KR_U_DISK_INSERTED,
+  KR_U_DISK_REMOVED,
+  KR_ONBOARDSD,
+  KR_READ_ONBOARDSD_ERROR
 };
 
 const char *const cn_pack[LABEL_NUM]={
@@ -574,10 +662,11 @@ u8 * textSelect(u8 sel)
   switch(infoSettings.language)
   {
     case ENGLISH:   return (u8 *)en_pack[sel];
-    case CHINESE:   return (u8 *)cn_pack[sel];
+    case KOREAN:   return (u8 *)kr_pack[sel];
+//    case CHINESE:   return (u8 *)cn_pack[sel];
 //    case RUSSIAN:   return (u8 *)ru_pack[sel];
-    case JAPANESE:  return (u8 *)jp_pack[sel];
-    case GERMAN:    return (u8 *)de_pack[sel];
+//    case JAPANESE:  return (u8 *)jp_pack[sel];
+//    case GERMAN:    return (u8 *)de_pack[sel];
 //    case ARMENIAN:  return (u8 *)am_pack[sel];
     default:        return NULL;					 
   }
